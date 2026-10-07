@@ -19,14 +19,18 @@ implementation-state reconciliation.
 
 ## Agent Skills layout
 
-Each skill follows the Agent Skills directory convention:
+Each skill follows the Agent Skills directory convention with progressive
+disclosure:
 
 ```text
-skills/<skill-name>/SKILL.md
+skills/<skill-name>/SKILL.md       core rules and phase routing
+skills/<skill-name>/references/     detailed phase guidance, loaded on demand
 ```
 
 The `SKILL.md` files contain YAML frontmatter with the skill name and
-description, followed by the full instructions.
+description, the core rules, and pointers to the bundled reference files. The
+reference files carry the detailed phase instructions and load only when the
+agent enters that phase.
 
 ## Safety model
 
